@@ -66,14 +66,30 @@ p {
     src: url(Lemondrop.ttf);
 }
 
+@font-face {
+    font-family: Circle;
+    src: url(circlethings2.ttf);
+}
 
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  font-family: Lemondrop;
+  
   color: #ffffff;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo_icon {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  font-family: Circle;
+  color: #ffc40d;
   letter-spacing: 2px;
   padding-top: 9px;
   font-weight: bold;
@@ -84,6 +100,12 @@ p {
   color: #fff;
   text-decoration: none;
 }
+
+#logo_icon:hover {
+  color: #ffc40d;
+  text-decoration: none;
+}
+
 
 /* footer */
 
