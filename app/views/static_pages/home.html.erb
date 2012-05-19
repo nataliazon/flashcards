@@ -1,13 +1,8 @@
 <% provide(:title, 'Główna') %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Fiszki | <%= yield(:title) %></title>
-  </head>
-  <body>
-    <h1>Witaj</h1>
-    <p>
-      To jest przykładowa strona główna.
-    </p>
-  </body>
-</html>
+<div class="center hero-unit">
+	<h1>Witaj w aplikacji Fiszki</h1>
+	<br>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<br>
+	<%= link_to "Zarejestruj się!", '#', class: "btn btn-large btn-primary" %>
+</div>
