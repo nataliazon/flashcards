@@ -8,7 +8,17 @@
               <li><%= link_to "Strona Główna",    root_path %></li>
               <li><%= link_to "O aplikacji",    o_aplikacji_path %></li>
             <% if signed_in? %>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Akcje <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Nowy set", '#' %></li>
 
+                <li><%= link_to "Nowa karta", nowa_karta_path %></li>
+        
+              </ul>
+            </li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Konto <b class="caret"></b>
@@ -16,7 +26,7 @@
               <ul class="dropdown-menu">
                 <li><%= link_to "Profil", current_user %></li>
 
-                <li><%= link_to "Ustawienia", '#' %></li>
+               
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Wyloguj się",  wyloguj_path, method: "delete" %>

@@ -1,0 +1,12 @@
+<% if @card.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      Liczba błędów: <%= @card.errors.count %>.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

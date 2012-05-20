@@ -1,2 +1,18 @@
-<h1>Cards#new</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
+<h1>Nowa karta</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@card) do |f| %>
+    
+
+      <%= f.label :term, "Termin" %>
+      <%= f.text_field :term %>
+
+      <%= f.label :definition, "Definicja" %>
+      <%= f.text_area :definition %>
+
+      <br>
+      <%= f.submit "Dodaj kartę!", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
