@@ -18,7 +18,7 @@
       <%= f.password_field :password_confirmation %>
 
       <%= f.label :birthdate, "Data urodzenia:" %>
-      <%= f.date_select :birthdate %>
+      <%= f.date_select :birthdate, :start_year => 1900 %>
 
       <%= f.label :about, "O mnie:" %>
       <%= f.text_area :about %>

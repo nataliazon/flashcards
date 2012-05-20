@@ -1,7 +1,10 @@
 Flashcards::Application.routes.draw do
   resources :users
-
+  resources :sessions, only: [:new, :create, :destroy]
   root to: 'static_pages#home'
+
+  match '/zaloguj', to: 'sessions#new'
+  match '/wyloguj', to: 'sessions#destroy', via: :delete
   match '/o_aplikacji',   to: 'static_pages#about'
   match '/rejestracja', to: 'users#new'
 

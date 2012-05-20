@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def create
   	 @user = User.new(params[:user])
     if @user.save
+      zaloguj @user
       flash[:success] = "Witaj w aplikacji Cerbo!"
       redirect_to @user
     else
