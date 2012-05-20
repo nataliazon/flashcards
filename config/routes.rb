@@ -1,4 +1,6 @@
 Flashcards::Application.routes.draw do
+  get "cards/new"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root to: 'static_pages#home'

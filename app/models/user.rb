@@ -17,6 +17,7 @@
 class User < ActiveRecord::Base
   attr_accessible :about, :active, :birthdate, :country, :email, :name, :webpage, :password, :password_confirmation
   has_secure_password
+  has_many :cards
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
   validates :name, presence: true, length: { :maximum => 50 }, uniqueness: true

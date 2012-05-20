@@ -13,9 +13,18 @@
   </aside>
   <aside class="span8">
     <section>
-        <h1>Lista setów użytkownika:</h1>
+        <h1>Najnowsze sety użytkownika:</h1>
         
         <p>Lorem</p>
+    </section>
+    <section>
+      <% if @user.cards.any? %>
+      <%= will_paginate @cards %>
+        <h3>Karty użytkownika (<%= @user.cards.count %>):</h3>
+            <ul class="cards">
+           <%= render @cards%>
+            </ul>           
+      <% end %>
     </section>
   </aside>
 </div>
