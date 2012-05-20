@@ -1,5 +1,5 @@
 Flashcards::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   root to: 'static_pages#home'
   match '/o_aplikacji',   to: 'static_pages#about'
