@@ -11,7 +11,8 @@ Flashcards::Application.routes.draw do
   match '/o_aplikacji',   to: 'static_pages#about'
   match '/rejestracja', to: 'users#new'
   match '/nowa_karta', to: 'cards#new'
-  match '/karta', to: 'cards#show'
+  match '/karta/:id', to: 'cards#show'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

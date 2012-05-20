@@ -1,4 +1,4 @@
 <li>
-  <span class="term"><%= card.term %></span>
+  <span class="term"><%= link_to card.term,  :controller => "cards", :action => "show", :id => card.id %></span>
   <span class="definition"><%= card.definition %></span>
 </li>

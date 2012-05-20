@@ -3,4 +3,7 @@
 
 <div class="row">
 <p><%= @card.definition %></p>
+<br>
+<p class="dodana">Karta dodana przez: <%= link_to User.find_by_id(@card.user_id).name, :controller => "users", :action => "show", :id => @card.user_id %></p>
 </div>
+
