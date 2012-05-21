@@ -4,7 +4,12 @@ class CardsController < ApplicationController
   end
 
   def create
+     
   	 @card = current_user.cards.build(params[:card])
+     @cardset = Cardset.find_by_id(params[:cardset][:id])
+
+     
+     @card.cardsets<<@cardset
     if @card.save
       flash[:success] = "Utworzono karte!"
       render 'show'

@@ -13,8 +13,13 @@
   </aside>
   <aside class="span8">
     <section>
-         <h3>Sety użytkownika:</h3>
-        <p>Lorem</p>
+      <% if @user.cardsets.any? %>
+        <h3>Sety użytkownika:</h3>
+        <%= will_paginate @cards %>
+            <ul class="cards">
+           <%= render @cards%>
+            </ul>
+      <% end %>
     </section>
     <section>
       <% if @user.cards.any? %>
