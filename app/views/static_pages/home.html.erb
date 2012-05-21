@@ -1,7 +1,26 @@
 <% provide(:title, 'Główna') %>
 
 	<% if signed_in? %>
-	<p>todo widok glowny</p>
+	<div class="row">
+  <aside class="span6">
+      <% if Cardset.any? %>
+        <h3>Ostatnio dodane sety:</h3>
+        <%= will_paginate @cardsets %>
+            <ul class="cards">
+           <%= render @cardsets%>
+            </ul>
+      <% end %>
+  </aside>
+    <aside class="span6">
+    	      <% if Card.any? %>
+        <h3>Ostatnio dodane karty:</h3>
+        <%= will_paginate @cards %>
+            <ul class="cards">
+           <%= render @cards%>
+            </ul>
+      <% end %>
+  </aside>
+</div>
 	<% else %>
 	<div class="center hero-unit">
 	<h1>Witaj w aplikacji Kerbo</h1>

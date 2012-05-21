@@ -14,10 +14,10 @@
   <aside class="span8">
     <section>
       <% if @user.cardsets.any? %>
-        <h3>Sety użytkownika:</h3>
-        <%= will_paginate @cards %>
+        <h3>Sety użytkownika (<%= @user.cardsets.count %>):</h3>
+        <%= will_paginate @cardsets %>
             <ul class="cards">
-           <%= render @cards%>
+           <%= render @cardsets%>
             </ul>
       <% end %>
     </section>

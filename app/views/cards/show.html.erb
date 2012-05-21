@@ -5,5 +5,21 @@
 <p><%= @card.definition %></p>
 <br>
 <p class="dodana">Karta dodana przez: <%= link_to User.find_by_id(@card.user_id).name, :controller => "users", :action => "show", :id => @card.user_id %></p>
+
+<%= form_for(@card) do |f| %>
+
+
+      
+     <% if current_user.cardsets.any? %>
+     <%= f.label :cardset, "Dodaj tą kartę do setu:" %>
+     <%= select("cardset", :id, current_user.cardsets.all.collect {|p| [ p.name, p.id ] }, {:include_blank => false}) %>
+       <%= f.submit "Dodaj kartę!", class: "btn btn-large btn-primary" %>
+     <% else %>
+     
+     <% end %>
+      <br>
+    
+    <% end %>
+
 </div>
 

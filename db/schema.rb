@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521084504) do
+ActiveRecord::Schema.define(:version => 20120521204729) do
 
   create_table "cards", :force => true do |t|
     t.text     "term"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20120521084504) do
     t.integer "cardset_id"
     t.integer "card_id"
   end
+
+  add_index "cards_cardsets", ["card_id", "cardset_id"], :name => "index_cards_cardsets_on_card_id_and_cardset_id", :unique => true
 
   create_table "cardsets", :force => true do |t|
     t.integer  "user_id"

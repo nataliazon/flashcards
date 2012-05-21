@@ -1,0 +1,20 @@
+<% provide(:title, @cardset.name) %>
+<h1><%= @cardset.name %> (<%= @cardset.category %>)</h1>
+
+<div class="row">
+	<aside class="span12">
+<section>
+      <% if @cardset.cards.any? %>
+        <h3>Karty w tym secie:</h3>
+        <%= will_paginate @cards %>
+            <ul class="cards">
+           <%= render @cards %>
+            </ul>
+      <% end %>
+ </section>
+</aside>
+
+<br>
+<p class="dodana">Set utworzony przez: <%= link_to User.find_by_id(@cardset.user_id).name, :controller => "users", :action => "show", :id => @cardset.user_id %></p>
+</div>
+

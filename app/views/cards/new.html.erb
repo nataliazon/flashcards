@@ -11,7 +11,7 @@
       <%= f.label :definition, "Definicja" %>
       <%= f.text_area :definition %>
 
-      <%= f.label :cardset, "Dodaj automatycznie do setu:" %>
+      <%= f.label :cardset, "Dodaj tą kartę do setu:" %>
      <%= select("cardset", :id, current_user.cardsets.all.collect {|p| [ p.name, p.id ] }, {:include_blank => true}) %>
    
       <br>

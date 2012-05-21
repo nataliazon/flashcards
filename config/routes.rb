@@ -1,8 +1,13 @@
 Flashcards::Application.routes.draw do
+  get "cardsets/new"
+
+  get "cardsets/show"
+
   get "cards/new"
 
   resources :users
-    resources :cards
+  resources :cards
+  resources :cardsets
   resources :sessions, only: [:new, :create, :destroy]
   root to: 'static_pages#home'
 
@@ -12,7 +17,8 @@ Flashcards::Application.routes.draw do
   match '/rejestracja', to: 'users#new'
   match '/nowa_karta', to: 'cards#new'
   match '/karta/:id', to: 'cards#show'
-
+  match '/nowy_set', to: 'cardsets#new'
+  match '/set/:id', to: 'cardsets#show'  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
