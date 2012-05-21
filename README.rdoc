@@ -1,1 +1,7 @@
-Flashcards readme file
+"Kerbo"
+
+Aplikacja służy do tworzenia tzw. fiszek, czyli "kart do nauki" oraz zestawów takich kart.
+Użytkownik może tworzyć własne sety i karty oraz dodawać do własnych setów swoje lub cudze karty.
+Na stronie głównej wyświetlają się ostatnio dodane przez wszystkich użytkowników sety/karty.
+Na stronie profilu użytkownika pojawiają się sety/karty dodane przez niego.
+Aplikacja jest zdeployowana roboczo pod adresem https://radiant-sword-6259.herokuapp.com/ (nie ma tam uzupełnionej bazy danych).
