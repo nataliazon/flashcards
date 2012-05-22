@@ -15,7 +15,7 @@
     <section>
       <% if @user.cardsets.any? %>
         <h3>Sety użytkownika (<%= @user.cardsets.count %>):</h3>
-        <%= will_paginate @cardsets %>
+       
             <ul class="cards">
            <%= render @cardsets%>
             </ul>
